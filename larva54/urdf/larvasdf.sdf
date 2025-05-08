@@ -1,0 +1,979 @@
+<sdf version='1.7'>
+  <model name='larva54'>
+    <link name='base_link'>
+      <inertial>
+        <pose>-0.0005 0 -0 0 -0 0</pose>
+        <mass>5.02655e-05</mass>
+        <inertia>
+          <ixx>4.02124e-10</ixx>
+          <ixy>-5.68087e-26</ixy>
+          <ixz>-7.06335e-26</ixz>
+          <iyy>2.05251e-10</iyy>
+          <iyz>1.9387e-26</iyz>
+          <izz>2.05251e-10</izz>
+        </inertia>
+      </inertial>
+      <collision name='base_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://larva54/meshes/base_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='base_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://larva54/meshes/base_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='rjoint11' type='revolute'>
+      <pose relative_to='base_link'>-0.0005 0 0 0 -0 0</pose>
+      <parent>base_link</parent>
+      <child>rsec11</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-3.14</lower>
+          <upper>3.14</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0.05</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='rsec11'>
+      <pose relative_to='rjoint11'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.015 -0.027248 0 0 -0 0</pose>
+        <mass>0.00814248</mass>
+        <inertia>
+          <ixx>2.58091e-06</ixx>
+          <ixy>-3.71117e-21</ixy>
+          <ixz>-6.24497e-22</ixz>
+          <iyy>9.04351e-07</iyy>
+          <iyz>1.02703e-20</iyz>
+          <izz>3.27245e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='rsec11_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://larva54/meshes/rsec11.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='rsec11_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://larva54/meshes/rsec11.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='pjoint11' type='prismatic'>
+      <pose relative_to='rsec11'>0.015 -0.008 0 0 -0 0</pose>
+      <parent>rsec11</parent>
+      <child>psec11</child>
+      <axis>
+        <xyz>0 -1 0</xyz>
+        <limit>
+          <lower>-0.01</lower>
+          <upper>0.01</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0.05</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='psec11'>
+      <pose relative_to='pjoint11'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 -0.044436 -0 0 -0 0</pose>
+        <mass>0.00950291</mass>
+        <inertia>
+          <ixx>2.06911e-06</ixx>
+          <ixy>1.61045e-21</ixy>
+          <ixz>1.63625e-24</ixz>
+          <iyy>6.31015e-07</iyy>
+          <iyz>2.96462e-21</iyz>
+          <izz>2.62322e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='psec11_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://larva54/meshes/psec11.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='psec11_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://larva54/meshes/psec11.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='rjoint12' type='revolute'>
+      <pose relative_to='psec11'>-0.015 -0.072 0 0 -0 0</pose>
+      <parent>psec11</parent>
+      <child>rsec12</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-3.14</lower>
+          <upper>3.14</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0.05</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='rsec12'>
+      <pose relative_to='rjoint12'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.015 -0.005218 -0.028219 0 -0 0</pose>
+        <mass>0.00900246</mass>
+        <inertia>
+          <ixx>3.53141e-06</ixx>
+          <ixy>-1.21392e-21</ixy>
+          <ixz>-2.01857e-21</ixz>
+          <iyy>4.16191e-06</iyy>
+          <iyz>-5.89211e-07</iyz>
+          <izz>1.08448e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='rsec12_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://larva54/meshes/rsec12.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='rsec12_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://larva54/meshes/rsec12.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='pjoint12' type='prismatic'>
+      <pose relative_to='rsec12'>0.015 -0.001455 -0.007867 -1.75365 0 0</pose>
+      <parent>rsec12</parent>
+      <child>psec12</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-0.01</lower>
+          <upper>0.01</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0.05</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='psec12'>
+      <pose relative_to='pjoint12'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0 0.05166 0 0 -0 0</pose>
+        <mass>0.0113929</mass>
+        <inertia>
+          <ixx>3.53005e-06</ixx>
+          <ixy>-1.63493e-21</ixy>
+          <ixz>7.98891e-23</ixz>
+          <iyy>7.5355e-07</iyy>
+          <iyz>1.03232e-21</iyz>
+          <izz>4.19127e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='psec12_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://larva54/meshes/psec12.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='psec12_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://larva54/meshes/psec12.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='rjoint13' type='revolute'>
+      <pose relative_to='psec12'>-0.015462 0.084232 0 1.75365 -0 0</pose>
+      <parent>psec12</parent>
+      <child>rsec13</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-3.14</lower>
+          <upper>3.14</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0.05</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='rsec13'>
+      <pose relative_to='rjoint13'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.015058 0.030463 0.014045 0 -0 0</pose>
+        <mass>0.0101125</mass>
+        <inertia>
+          <ixx>5.21578e-06</ixx>
+          <ixy>1.42781e-08</ixy>
+          <ixz>6.58265e-09</ixz>
+          <iyy>1.96896e-06</iyy>
+          <iyz>-1.88023e-06</iyz>
+          <izz>5.18041e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='rsec13_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://larva54/meshes/rsec13.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='rsec13_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://larva54/meshes/rsec13.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='pjoint13' type='prismatic'>
+      <pose relative_to='rsec13'>0.015462 0.007265 0.003349 0.43199 -0 0</pose>
+      <parent>rsec13</parent>
+      <child>psec13</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-0.01</lower>
+          <upper>0.01</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0.05</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='psec13'>
+      <pose relative_to='pjoint13'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0.063485 0 0 -0 0</pose>
+        <mass>0.0123379</mass>
+        <inertia>
+          <ixx>4.46824e-06</ixx>
+          <ixy>-9.88411e-22</ixy>
+          <ixz>1.0331e-22</ixz>
+          <iyy>8.14818e-07</iyy>
+          <iyz>8.62915e-21</iyz>
+          <izz>5.18301e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='psec13_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://larva54/meshes/psec13.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='psec13_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://larva54/meshes/psec13.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='rjoint14' type='revolute'>
+      <pose relative_to='psec13'>-0.015 0.09856 0 -0.43199 0 0</pose>
+      <parent>psec13</parent>
+      <child>rsec14</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-3.14</lower>
+          <upper>3.14</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0.05</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='rsec14'>
+      <pose relative_to='rjoint14'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.015 0 -0.015718 0 -0 0</pose>
+        <mass>0.0137604</mass>
+        <inertia>
+          <ixx>2.3323e-06</ixx>
+          <ixy>-5.55956e-22</ixy>
+          <ixz>9.95418e-22</ixz>
+          <iyy>3.25281e-06</iyy>
+          <iyz>-2.17052e-21</iyz>
+          <izz>1.08924e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='rsec14_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://larva54/meshes/rsec14.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='rsec14_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://larva54/meshes/rsec14.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='pjoint14' type='prismatic'>
+      <pose relative_to='rsec14'>0.015 0 0.008 1.5708 -0 0</pose>
+      <parent>rsec14</parent>
+      <child>psec14</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-0.01</lower>
+          <upper>0.01</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0.05</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='psec14'>
+      <pose relative_to='pjoint14'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0 0.021804 -0 0 -0 0</pose>
+        <mass>0.00694914</mass>
+        <inertia>
+          <ixx>5.77072e-07</ixx>
+          <ixy>-5.29859e-22</ixy>
+          <ixz>-2.7593e-22</ixz>
+          <iyy>4.75978e-07</iyy>
+          <iyz>-5.29396e-22</iyz>
+          <izz>1.00012e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='psec14_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://larva54/meshes/psec14.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='psec14_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://larva54/meshes/psec14.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='rjoint21' type='revolute'>
+      <pose relative_to='rsec12'>0 0 0 0 -0 0</pose>
+      <parent>rsec12</parent>
+      <child>rsec21</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-3.14</lower>
+          <upper>3.14</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0.05</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='rsec21'>
+      <pose relative_to='rjoint21'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.015 -0.027248 -0 0 -0 0</pose>
+        <mass>0.00814248</mass>
+        <inertia>
+          <ixx>2.58091e-06</ixx>
+          <ixy>-4.06461e-21</ixy>
+          <ixz>-8.36274e-22</ixz>
+          <iyy>9.04351e-07</iyy>
+          <iyz>2.43522e-21</iyz>
+          <izz>3.27245e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='rsec21_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://larva54/meshes/rsec21.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='rsec21_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://larva54/meshes/rsec21.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='linkjoint12' type='revolute'>
+      <pose relative_to='rsec21'>0.0005 0 0 0 -0 0</pose>
+      <parent>rsec21</parent>
+      <child>link12</child>
+      <axis>
+        <xyz>-1 0 0</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>100</velocity>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0.05</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='link12'>
+      <pose relative_to='linkjoint12'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0.0005 0 -0 0 -0 0</pose>
+        <mass>5.02655e-05</mass>
+        <inertia>
+          <ixx>4.02124e-10</ixx>
+          <ixy>-2.63933e-25</ixy>
+          <ixz>4.39488e-28</ixz>
+          <iyy>2.05251e-10</iyy>
+          <iyz>4.52364e-26</iyz>
+          <izz>2.05251e-10</izz>
+        </inertia>
+      </inertial>
+      <collision name='link12_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://larva54/meshes/link12.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='link12_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://larva54/meshes/link12.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='pjoint21' type='prismatic'>
+      <pose relative_to='rsec21'>0.015 -0.008 0 0 -0 0</pose>
+      <parent>rsec21</parent>
+      <child>psec21</child>
+      <axis>
+        <xyz>0 -1 0</xyz>
+        <limit>
+          <lower>-0.01</lower>
+          <upper>0.01</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0.05</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='psec21'>
+      <pose relative_to='pjoint21'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0 -0.044436 -0 0 -0 0</pose>
+        <mass>0.00950291</mass>
+        <inertia>
+          <ixx>2.06911e-06</ixx>
+          <ixy>-1.11625e-21</ixy>
+          <ixz>4.00861e-23</ixz>
+          <iyy>6.31015e-07</iyy>
+          <iyz>3.78518e-21</iyz>
+          <izz>2.62322e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='psec21_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://larva54/meshes/psec21.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='psec21_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://larva54/meshes/psec21.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='rjoint22' type='revolute'>
+      <pose relative_to='psec21'>-0.015 -0.072 0 0 -0 0</pose>
+      <parent>psec21</parent>
+      <child>rsec22</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-3.14</lower>
+          <upper>3.14</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0.05</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='rsec22'>
+      <pose relative_to='rjoint22'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.015 -0.005218 -0.028219 0 -0 0</pose>
+        <mass>0.00900246</mass>
+        <inertia>
+          <ixx>3.53141e-06</ixx>
+          <ixy>-5.12518e-22</ixy>
+          <ixz>-9.17759e-21</ixz>
+          <iyy>4.16191e-06</iyy>
+          <iyz>-5.89211e-07</iyz>
+          <izz>1.08448e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='rsec22_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://larva54/meshes/rsec22.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='rsec22_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://larva54/meshes/rsec22.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='pjoint22' type='prismatic'>
+      <pose relative_to='rsec22'>0.015 -0.001455 -0.007867 -1.7536 0 0</pose>
+      <parent>rsec22</parent>
+      <child>psec22</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-0.01</lower>
+          <upper>0.01</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0.05</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='psec22'>
+      <pose relative_to='pjoint22'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0 0.05166 0 0 -0 0</pose>
+        <mass>0.0113929</mass>
+        <inertia>
+          <ixx>3.53005e-06</ixx>
+          <ixy>1.49596e-21</ixy>
+          <ixz>-1.42024e-21</ixz>
+          <iyy>7.5355e-07</iyy>
+          <iyz>3.04402e-21</iyz>
+          <izz>4.19127e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='psec22_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://larva54/meshes/psec22.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='psec22_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://larva54/meshes/psec22.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='rjoint23' type='revolute'>
+      <pose relative_to='psec22'>-0.015462 0.084232 0 1.7536 -0 0</pose>
+      <parent>psec22</parent>
+      <child>rsec23</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-3.14</lower>
+          <upper>3.14</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0.05</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='rsec23'>
+      <pose relative_to='rjoint23'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.015058 0.030463 0.014045 0 -0 0</pose>
+        <mass>0.0101125</mass>
+        <inertia>
+          <ixx>5.21578e-06</ixx>
+          <ixy>1.42781e-08</ixy>
+          <ixz>6.58265e-09</ixz>
+          <iyy>1.96896e-06</iyy>
+          <iyz>-1.88023e-06</iyz>
+          <izz>5.18041e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='rsec23_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://larva54/meshes/rsec23.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='rsec23_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://larva54/meshes/rsec23.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='pjoint23' type='prismatic'>
+      <pose relative_to='rsec23'>0.015462 0.007265 0.003349 0.43199 -0 0</pose>
+      <parent>rsec23</parent>
+      <child>psec23</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-0.01</lower>
+          <upper>0.01</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0.05</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='psec23'>
+      <pose relative_to='pjoint23'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0 0.063485 -0 0 -0 0</pose>
+        <mass>0.0123379</mass>
+        <inertia>
+          <ixx>4.46824e-06</ixx>
+          <ixy>-9.17962e-22</ixy>
+          <ixz>-2.82036e-21</ixz>
+          <iyy>8.14818e-07</iyy>
+          <iyz>2.38228e-21</iyz>
+          <izz>5.18301e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='psec23_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://larva54/meshes/psec23.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='psec23_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://larva54/meshes/psec23.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='rjoint24' type='revolute'>
+      <pose relative_to='psec23'>-0.015 0.09856 0 -0.43199 0 0</pose>
+      <parent>psec23</parent>
+      <child>rsec24</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-3.14</lower>
+          <upper>3.14</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0.05</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='rsec24'>
+      <pose relative_to='rjoint24'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.015 0 0.010722 0 -0 0</pose>
+        <mass>0.00425748</mass>
+        <inertia>
+          <ixx>2.63198e-07</ixx>
+          <ixy>5.22757e-22</ixy>
+          <ixz>1.1883e-21</ixz>
+          <iyy>6.29591e-07</iyy>
+          <iyz>1.05879e-21</iyz>
+          <izz>4.58224e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='rsec24_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://larva54/meshes/rsec24.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='rsec24_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://larva54/meshes/rsec24.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='pjoint24' type='prismatic'>
+      <pose relative_to='rsec24'>0.015 0 0.008 -1.5708 0 -3.14159</pose>
+      <parent>rsec24</parent>
+      <child>psec24</child>
+      <axis>
+        <xyz>0 -1 0</xyz>
+        <limit>
+          <lower>-0.01</lower>
+          <upper>0.01</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.001</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0.05</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='psec24'>
+      <pose relative_to='pjoint24'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 -0.021804 -0 0 -0 0</pose>
+        <mass>0.00694914</mass>
+        <inertia>
+          <ixx>5.77072e-07</ixx>
+          <ixy>-3.24751e-22</ixy>
+          <ixz>-2.81407e-22</ixz>
+          <iyy>4.75978e-07</iyy>
+          <iyz>2.38228e-22</iyz>
+          <izz>1.00012e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='psec24_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://larva54/meshes/psec24.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='psec24_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://larva54/meshes/psec24.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <joint name='loop_joint01' type='revolute'>
+      <pose>-0 0 0.0000 0 -0 0</pose>
+      <parent>psec14</parent>
+      <child>base_link</child>
+      <axis>
+        <xyz>0 0 0</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>1.0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+
+    <joint name='loop_joint02' type='revolute'>
+      <pose>0 0 0.0000 0 -0 0</pose>
+      <parent>psec24</parent>
+      <child>link12</child>
+      <axis>
+        <xyz>0 0 0</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>1.0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+  </model>
+</sdf>
