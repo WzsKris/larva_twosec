@@ -1,1 +1,82 @@
 controller_joint_names: ['', 'rjoint11', 'pjoint11', 'rjoint12', 'pjoint12', 'rjoint13', 'pjoint13', 'rjoint14', 'pjoint14', 'rjoint21', 'pjoint21', 'rjoint22', 'pjoint22', 'rjoint23', 'pjoint23', 'rjoint24', 'pjoint24', 'linkjoint12', ]
+
+joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+ # Position Controllers ---------------------------------------
+
+joint01_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: rjoint11
+    pid: {p: 4.0, i: 0, d: 0}
+
+joint02_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: pjoint11
+    pid: {p: 4.0, i: 0, d: 0}
+
+joint03_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: rjoint12
+    pid: {p: 4.0, i: 0, d: 0}
+
+joint04_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: pjoint12
+    pid: {p: 4.0, i: 0, d: 0}
+
+joint05_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: rjoint13
+    pid: {p: 4.0, i: 0, d: 0}
+
+joint06_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: pjoint13
+    pid: {p: 4.0, i: 0, d: 0}
+
+joint07_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: rjoint14
+    pid: {p: 4.0, i: 0, d: 0}
+
+joint08_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: pjoint14
+    pid: {p: 4.0, i: 0, d: 0}
+
+joint09_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: pjoint21
+    pid: {p: 4.0, i: 0, d: 0}
+
+joint10_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: rjoint22
+    pid: {p: 4.0, i: 0, d: 0}
+
+joint11_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: pjoint22
+    pid: {p: 4.0, i: 0, d: 0}
+
+joint12_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: rjoint23
+    pid: {p: 4.0, i: 0, d: 0}
+
+joint13_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: pjoint23
+    pid: {p: 4.0, i: 0, d: 0}
+
+joint14_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: rjoint24
+    pid: {p: 4.0, i: 0, d: 0}
+
+joint15_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: pjoint24
+    pid: {p: 4.0, i: 0, d: 0}

@@ -1,6 +1,17 @@
 <launch>
   <include
     file="$(find gazebo_ros)/launch/empty_world.launch" />
+
+	<!-- <include file="$(find larva54)/launch/robot_description.launch"/> -->
+  <rosparam file="$(find larva54)/config/joint_names_larva54.yaml" command="load"/>
+
+	<!-- Load URDF wrapper -->
+ <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find larva54)/urdf/larva54_control.urdf.xacro'" />
+
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+    <param name="use_gui" value="false"/>
+  </node>
+
   <node
     name="tf_footprint_base"
     pkg="tf"
